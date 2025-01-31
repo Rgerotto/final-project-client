@@ -6,6 +6,9 @@ import { supabase } from "./supabase";
 import { getBookings } from "./data-service";
 import { redirect } from "next/navigation";
 
+  // TO TEST
+  //await new Promise((res) => setTimeout(res, 2000));
+
 export async function updateGuest(formData){
 
     const session = await auth();
@@ -39,6 +42,8 @@ export async function signOutAction(){
 }
 
 export async function deleteReservetion(bookingId){
+
+
   const session = await auth();
 
   if(!session) throw new Error('You most be logged in')
